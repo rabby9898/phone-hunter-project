@@ -23,24 +23,40 @@
         />
         <button onclick="handleSearch()" class="btn btn-accent">Search</button>
       </div>
+      <div>
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="show_details_modal" class="modal">
+          <form method="dialog" class="modal-box">
+            <div id="modal-container"></div>
+            <div class="modal-action">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn btn-error">Close</button>
+            </div>
+          </form>
+        </dialog>
+      </div>
     </header>
     <main>
       <section class="px-36 py-10">
+        <div class="text-center">
+          <span
+            id="loading-spinner"
+            class="loading loading-bars loading-lg hidden mt-40"
+          ></span>
+        </div>
         <div
           id="phone-container"
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 py-11"
         ></div>
 
         <div class="text-right">
-          <button id="showAll-btn" class="btn btn-neutral hidden">
+          <button
+            onclick="showAllHandle()"
+            id="showAll-btn"
+            class="btn btn-neutral hidden"
+          >
             Show All
           </button>
-        </div>
-        <div class="py-40 text-center">
-          <span
-            id="loading-spinner"
-            class="loading loading-bars loading-lg"
-          ></span>
         </div>
       </section>
     </main>
