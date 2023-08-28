@@ -14,9 +14,36 @@
   </head>
   <body>
     <header>
-      <h1>Phone Hunter</h1>
+      <div class="my-7 text-center">
+        <input
+          id="search-input"
+          type="text"
+          placeholder="Search products"
+          class="input input-bordered w-full max-w-xs"
+        />
+        <button onclick="handleSearch()" class="btn btn-accent">Search</button>
+      </div>
     </header>
-    <main></main>
+    <main>
+      <section class="px-36 py-10">
+        <div
+          id="phone-container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 py-11"
+        ></div>
+
+        <div class="text-right">
+          <button id="showAll-btn" class="btn btn-neutral hidden">
+            Show All
+          </button>
+        </div>
+        <div class="py-40 text-center">
+          <span
+            id="loading-spinner"
+            class="loading loading-bars loading-lg"
+          ></span>
+        </div>
+      </section>
+    </main>
     <footer></footer>
     <script src="js/hunter.js"></script>
   </body>
